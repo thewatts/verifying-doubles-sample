@@ -21,3 +21,11 @@ Failed examples:
 
 rspec ./spec/deep_thought_spec.rb:5 # DeepThought.call returns the ultimate answer
 ```
+
+## The Why
+
+The DSL of the generator has changed - but the usage in the `DeepThought` class has not been updated.
+
+If a regular double was used, ex: `double(generate: 42)` instead of `instance_double(UltimateAnswerGenerator, generate: 42)`, the test would **pass** - even though the generator no longer has a `generate` method.
+
+This creates a situation where you've mocked something out - and it changes - but your test suite doesn't catch the change. You'd only find out in QA/Production.
