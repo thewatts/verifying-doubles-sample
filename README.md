@@ -1,1 +1,1 @@
-# Ruby Template
+# Verifying Doubles Example
