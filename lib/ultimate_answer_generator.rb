@@ -1,5 +1,5 @@
 class UltimateAnswerGenerator
-  def generate
+  def call
     sleep 2 # artificial slowdown
 
     42

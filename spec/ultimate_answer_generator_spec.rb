@@ -5,7 +5,7 @@ RSpec.describe UltimateAnswerGenerator do
     it "generates the answer" do
       generator = UltimateAnswerGenerator.new
 
-      result = generator.generate
+      result = generator.call
       expect(result).to eq 42
     end
   end
